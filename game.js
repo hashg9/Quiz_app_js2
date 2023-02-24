@@ -18,7 +18,6 @@ fetch(url)
     return res.json();
   })
   .then(loadedQuestions => {
-    console.log(loadedQuestions.results);
     questions = loadedQuestions.results.map(loadedQuestion => {
       const formattedQuestion = {
         question: loadedQuestion.question
@@ -61,7 +60,8 @@ getNewQuestion = () => {
       <h2>You Scored ${score}/${MAX_QUESTIONS}</h2>
       <button class = "btn" onclick="location.reload" ></buttton>
       `;
-      // show_score.classList.remove('show_score');
+    //   show_score.classList.remove('#show_score');
+      show_score.remove("#show_score");
 
   }
   questionCounter++;
